@@ -119,6 +119,13 @@ ul {
     color: var(--color-brand-dark);
 }
 
+/* .button:disabled {
+    color: gray;
+    background-color: lightgray;
+    border-color: currentColor;
+    cursor: not-allowed;
+} */
+
 /* Link */
 .link {
     color: var(--color-primary-light);
@@ -529,6 +536,8 @@ footer::after {
     background-color: var(--color-primary-light);
     border-radius: 32px;
     position: relative;
+    padding: 128px;
+    overflow-y: auto;
 }
 
 .modal-btn-close {
@@ -542,4 +551,100 @@ footer::after {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+}
+
+.modal-title {}
+
+.modal-text {}
+
+/* Form */
+.form-input {
+    padding: 16px 42px;
+    width: 100%;
+    border: 1px solid var(--color-border-light);
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--color-brand-light);
+}
+
+.form-field {
+    position: relative;
+    margin-bottom: 32px;
+}
+
+.form-label {
+    position: absolute;
+    top: 16px;
+    left: 42px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.1;
+    color: var(--color-border-light);
+    transition: transform 0.3s;
+}
+
+.form-field:focus-within .form-label {
+    transform: translate(-36px, -38px);
+    color: var(--color-primary-dark);
+}
+
+.form-btn {
+    display: block;
+    margin: 0 auto 24px;
+
+}
+
+.form-text {
+    max-width: 220px;
+    font-size: 12px;
+    line-height: 1.5;
+    font-weight: 500;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.form-link {
+    color: var(--color-primary-dark);
+    text-underline-offset: 2px;
+}
+
+/* CheckBox */
+
+.checkbox {
+    position: relative;
+    margin-bottom: 10px;
+    left: 15%;
+}
+
+.checkbox-input {
+    appearance: none;
+}
+
+.checkbox-input:checked+.checkbox-label::before {
+    background-image: url(../images/close-modal.png);
+
+}
+
+
+.checkbox-label {
+    padding-left: 24px;
+}
+
+.checkbox-label::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    margin-top: 5px;
+    border-radius: 2px;
+    content: '';
+    border: 1px solid var(--color-primary-dark);
+    background-position: 80%;
+    background-repeat: no-repeat;
+    background-size: 22px;
 }
