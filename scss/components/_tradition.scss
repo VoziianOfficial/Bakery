@@ -1,34 +1,25 @@
-/* Tradition-sections */
+/* Tradition section */
 
 .tradition-section {
-    padding-top: 96px;
-}
+  padding-top: 96px;
 
-.traditions-container {
+  &__container {
     display: flex;
     justify-content: space-between;
     gap: 40px;
+  }
 
-}
-
-.traditions-content {
+  &__content {
     max-width: 710px;
-}
+  }
 
-.tradition-title {
+  &__title {
     margin-bottom: 42px;
-}
+  }
 
-.tradition-text .brand {
-    color: var(--color-brand-light);
-    font-weight: 600;
-}
-
-.tradition-text .uppercase {
-    color: var(--color-brand-light);
-    text-transform: uppercase;
-}
-
-.tradition-text.limited {
-    max-width: 340px;
+  &__text {
+    &--limited {
+      max-width: 340px;
+    }
+  }
 }
