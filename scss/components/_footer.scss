@@ -1,88 +1,76 @@
-/* Footer */
+.footer {
+  background-image: url('../images/footer-background.png');
+  background-color: var(--color-primary-dark);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 32px 0;
+  position: relative;
 
-.footer-container {
+  &__container {
     display: flex;
     gap: 20px;
-}
+  }
 
-.footer-nav {
+  &__nav,
+  &__address {
     display: flex;
     flex-basis: 50%;
     gap: 20px;
-}
+  }
 
-.footer-address {
-    flex-basis: 50%;
-    display: flex;
-    gap: 20px;
-}
-
-.footer-menu {
+  &__menu,
+  &__address-list {
     flex-grow: 1;
-}
+  }
 
-.footer-logo {
+  &__logo {
     flex-grow: 1;
-}
+  }
 
-.address-list,
-.address-info {
-    flex-grow: 1;
-}
-
-
-.address-link {
+  &__link,
+  &__address-link {
     font-size: 16px;
     font-weight: 300;
     color: var(--color-primary-light);
     text-decoration: none;
-}
 
-.address-link:hover {
-    color: var(--color-brand-light);
-}
+    &:hover {
+      color: var(--color-brand-light);
+    }
+  }
 
-.address-icon {
+  &__icon {
     fill: var(--color-primary-light);
-}
 
-.address-icon:hover {
-    fill: var(--color-brand-light);
-}
+    &:hover {
+      fill: var(--color-brand-light);
+    }
+  }
 
-.address-copyright {
+  &__copyright {
     font-size: 14px;
-}
+  }
 
-.footer {
-    background-image: url('../images/footer-background.png');
-    background-color: var(--color-primary-dark);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    padding: 32px 0;
-    position: relative;
-}
-
-.footer::after,
-.footer::before {
+  &::before,
+  &::after {
     content: '';
     position: absolute;
-    background-repeat: no-repeat;
     bottom: 0;
+    background-repeat: no-repeat;
+  }
 
-}
-
-.footer::before {
-    background-image: url(../images/small-buttons.png);
+  &::before {
+    background-image: url('../images/small-buttons.png');
     width: 180px;
     height: 120px;
     left: 0;
-}
+  }
 
-footer::after {
-    background-image: url(../images/two-buttons.png);
+  &::after {
+    background-image: url('../images/two-buttons.png');
     width: 380px;
     height: 190px;
     right: 0;
+  }
 }
