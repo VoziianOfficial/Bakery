@@ -5,7 +5,11 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding-top: 32px;
+  padding-top: 16px;
+
+  @media screen and (min-width: $bp-desktop) {
+    padding-top: 32px;
+  }
 
   &__container {
     display: flex;
@@ -24,7 +28,6 @@
     display: none;
 
     @media screen and (min-width: $bp-desktop) {
-      display: none;
       display: flex;
       gap: 64px;
       flex-grow: 1;
@@ -33,16 +36,17 @@
   }
   &__btn {
     display: none;
+
     @media screen and (min-width: $bp-desktop) {
       display: block;
     }
   }
 
   &__burger {
-    background-color:transparent;
+    background-color: transparent;
     width: 24px;
     height: 24px;
-    border:none;
+    border: none;
     padding: 0;
     fill: var(--color-primary-light);
 
