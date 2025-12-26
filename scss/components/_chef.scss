@@ -1,17 +1,24 @@
 /* Chef section */
 .chefs-section {
   &__title {
-    margin: 0 auto 80px;
+    margin: 0 auto 24px;
     position: relative;
+     @media screen and (min-width: $bp-desktop) {
+    margin: 80px;
+  }
 
     &::before,
     &::after {
-      display: block;
+      display: none;
       width: 352px;
       border: 2px solid var(--color-decoration-light);
       content: '';
       position: absolute;
       bottom: 24px;
+
+      @media screen and (min-width: $bp-desktop) {
+        display: block;
+      }
     }
 
     &::before {
@@ -25,38 +32,60 @@
 
   &__list {
     display: flex;
-    gap: 30px;
+    flex-direction: column;
     flex-wrap: wrap;
+    gap: 20px;
+    @media screen and (min-width: $bp-tablet) {
+      gap: 40px 30px;
+      flex-direction: row;
+    }
   }
 
   &__item {
-    flex-basis: calc((100% - 30px) / 2);
+    @media screen and (min-width: $bp-tablet) {
+      flex-basis: calc((100% - 30px) / 2);
+    }
   }
 }
 
-
 .chef-card {
   display: flex;
-  gap: 30px;
+  gap: 16px;
+  align-items: flex-start;
+  @media screen and (min-width: $bp-desktop) {
+    gap: 30px;
+  }
 
   &__photo {
+    width: 140px;
     border-radius: 4px 4px 4px 200px;
     box-shadow:
       -16px 16px 0 0 #faf4ea,
       -16px 16px 0 2px var(--color-border-light);
+    @media screen and (min-width: $bp-desktop) {
+      width: 240px;
+    }
   }
 
   &__title {
-    font-size: 40px;
+    font-size: 24px;
     font-weight: 600;
     margin-bottom: 16px;
+    @media screen and (min-width: $bp-tablet) {
+        font-size: 40px;
+      }
   }
 
   &__text p {
     margin-bottom: 24px;
+    font-size: 14px;
 
     &:last-child {
       margin-bottom: 0;
     }
+
+     @media screen and (min-width: $bp-tablet) {
+        font-size: 18px;
+      }
   }
 }

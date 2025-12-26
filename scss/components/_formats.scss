@@ -1,22 +1,38 @@
 /* formats section */
 
 .formats-section {
-  &__container {
+  &__slider {
     display: flex;
     gap: 32px;
     align-items: center;
   }
 
-  &__list {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    flex: 1;
+  &__container{
+    overflow: hidden;
   }
 
-  &__item {
-    flex-basis: calc((100% - 40px) / 3);
+  &__list{
+    margin-bottom: 32px;
   }
+
+  &__button{
+    display: none;
+
+    @media screen and (min-width: $bp-tablet) {
+      display: flex;
+    }
+  }
+
+  // &__list {
+  //   display: flex;
+  //   gap: 20px;
+  //   flex-wrap: wrap;
+  //   flex: 1;
+  // }
+
+  // &__item {
+  //   flex-basis: calc((100% - 40px) / 3);
+  // }
 
   &__title {
     margin-bottom: 80px;
@@ -25,8 +41,10 @@
 
 .format-card {
   position: relative;
-  border: 1px solid lightblue;
-  border-radius: 16px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  height: 444px;
   padding: 24px;
   background-image: linear-gradient(
     180deg,
@@ -34,17 +52,15 @@
     rgba(49, 38, 26, 0.71) 72.92%,
     var(--color-primary-dark) 100%
   );
-  height: 444px;
   box-shadow: 2px 2px 4px 4px rgb(103, 110, 91);
-  transition: transform 0.7s;
+  border-radius: 16px;
+  transition: transform 0.3s;
   overflow: hidden;
-  display: flex;
-  justify-content: flex-end;
-  flex-direction: column;
 
   &:hover {
     transform: scale(1.05);
   }
+
 
   &__title {
     font-size: 24px;
