@@ -5,6 +5,7 @@
     position: relative;
      @media screen and (min-width: $bp-desktop) {
     margin: 80px;
+    margin: 0 8px;
   }
 
     &::before,
