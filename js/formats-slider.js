@@ -2,6 +2,11 @@ const swiper = new Swiper('.swiper-container', {
     loop: true,
     slidesPerView: 1,
     spaceBetween: 20,
+    keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+    },
+    simulateTouch: true,
     breakpoints: {
         768: {
             slidesPerView: 2,
@@ -19,4 +24,16 @@ const swiper = new Swiper('.swiper-container', {
         nextEl: '.carousel-button.next',
         prevEl: '.carousel-button.prev',
     },
+    grabCursor: true,
+    effect: 'coverflow',
+    coverflowEffect: {
+        rotate: 30,
+        slideShadows: false,
+    },
+  
+    
+
+
+
+
 });
